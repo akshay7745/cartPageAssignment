@@ -3,6 +3,7 @@ const cartSubtotalParent =
   document.getElementsByClassName("cart-total-items")[0];
 const cartTotalAmount = document.getElementsByClassName("cart-total-price")[0];
 
+const checkOutBtn = document.getElementsByClassName("checkout-btn")[0];
 const formatInRupees = new Intl.NumberFormat("en-IN", {
   style: "currency",
   currency: "INR",
@@ -104,3 +105,10 @@ function updateCartAmount(data) {
     cartTotalAmount.innerHTML = 0;
   }
 }
+
+checkOutBtn.addEventListener("click", (e) => {
+  alert("Order placed successfully.");
+  cartData.items = [];
+  updateCartData(cartData);
+  updateCartAmount(cartData);
+});

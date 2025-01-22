@@ -5,10 +5,83 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+@media only screen and (max-width: 780px) {
+  .container {
+    width: 780px;
+  }
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 316px;
+    width: 100%;
+    background-image: url("./images/hero.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .cart-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    align-items: center;
+    justify-content: center;
+    /* padding: 63px 0; */
+  }
+  .cart {
+    width: 817px;
+    /* border: 1px solid blue; */
+  }
+
+  .subTotal {
+    width: 393px;
+    /* width: 30%; */
+    /* border: 1px solid red; */
+    background-color: rgba(249, 241, 231, 1);
+    padding: 5px 50px;
+    text-align: center;
+    font-family: Poppins;
+    margin: 20px auto;
+  }
+  footer {
+    width: 480px;
+    padding: 100px 53px;
+    background-color: rgba(250, 243, 234, 1);
+    font-family: Poppins;
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70px; */
+  }
+
+  .footer-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid green; */
+    gap: 15px;
+  }
+
+  .footer-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+}
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 1440px;
 }
 /* Navbar styles */
 .header {
@@ -89,8 +162,24 @@
   width: 100%;
   background-image: url("./images/hero.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+}
+
+.cartBanner {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.cartBanner:hover,
+li:hover,
+.checkout-btn,
+.delete {
+  cursor: pointer;
 }
 .hero h1 {
   font-family: Poppins;
